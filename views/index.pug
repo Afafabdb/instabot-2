@@ -1,0 +1,46 @@
+html
+	head
+		title Instabot
+	body(style="font-family: Arial; color:lightslategray;")
+		h1(style="text-align:center; padding: 1.5em; color:lightblue;") Instabot
+		h2(style="color: lightblue;") List of uncommented posts
+
+	each post in posts
+		div(style="padding-left: 20px;")
+			h3(style="display: inline-block; padding-right:10px") Post n° 
+				= post.post_id
+			span by 
+				= post.username
+			span(style="padding-left:10px;")
+				a(href
+					= post.link
+					target="_blank") See the post online
+
+			div
+				div(style="width: 240px; display:inline-block; padding-right: 20px;")
+					img(style="max-width: 240px; height: auto" src
+						=post.picture)
+				div(style="width: 400px; display:inline-block; vertical-align: top;")
+					p
+						= post.content
+
+				div(style="padding-top: 20px;margin-left: 30px;border-left: solid 10px lightblue;")
+					form(style="padding-left:20px;" action="" method="post")
+						input(type="hidden" name="id" value
+							= post.id)
+						input(type="hidden" name="post_id" value
+							= post.post_id)
+						div(style="display:block; padding-bottom:10px")
+							label(style="display:block; padding-bottom:10px" for="category" + post.id) Select the category of the post
+							select(style="width: 200px; font-size:16px;" name="category" id="category" + post.id)
+								each category in categories
+									option(value
+										= category.id) 
+										= category.name
+						div(style="display:block; padding-bottom:10px")
+							input(type="checkbox" name="no_comment" id="no_comment" + post.id value="no")
+							label(for="no_comment" + post.id) I don't want to comment his post
+						div
+							input(style="font-size: 18px; padding: 5px;" type="submit" name="submit" value="Valider")
+				hr
+		

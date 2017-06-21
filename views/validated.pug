@@ -1,0 +1,27 @@
+html
+	head
+		title Instabot
+	body(style="font-family: Arial; color:lightslategray;")
+		h1(style="text-align:center; padding: 1.5em; color:lightblue;") Instabot
+		h2(style="color: lightblue;") List of commented posts
+
+	each post in posts
+		div(style="padding-left: 20px;")
+			h3(style="display: inline-block; padding-right:10px") Post n° 
+				= post.post_id
+			span by 
+				= post.username
+			span(style="padding-left:10px;")
+				a(href
+					= post.link
+					target="_blank") See the post online
+
+			div
+				div(style="width: 240px; display:inline-block; padding-right: 20px;")
+					img(style="max-width: 240px; height: auto" src
+						=post.picture)
+				div(style="width: 400px; display:inline-block; vertical-align: top;")
+					p
+						= post.content
+				hr
+		
