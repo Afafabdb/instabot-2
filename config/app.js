@@ -4,11 +4,11 @@ module.exports = {
 		password: "adarsh98" // a Instagram account password
 	},
 	db : {
-		host: "", // the database host (ex: localhost)
-		dialect: "", // the database dialect (ex: mysql)
-		name : "", // a database name (ex: instabot)
-		login : "", // the database login
-		password : "" // the database password
+		host: "sql109.epizy.com", // the database host (ex: localhost)
+		dialect: "mysql", // the database dialect (ex: mysql)
+		name : "epiz_29915243_XXX", // a database name (ex: instabot)
+		login : "epiz_29915243", // the database login
+		password : "A7jM57VvWuXRkIH" // the database password
 	},
 	cron : {
 		hashtag : "", // the hashtag to search for posts
