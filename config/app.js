@@ -1,7 +1,7 @@
 module.exports = {
 	user : {
-		login: "", // a Instagram account nickname
-		password: "" // a Instagram account password
+		login: "5n5n5n51", // a Instagram account nickname
+		password: "adarsh98" // a Instagram account password
 	},
 	db : {
 		host: "", // the database host (ex: localhost)
